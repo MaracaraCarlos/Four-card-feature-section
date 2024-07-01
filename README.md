@@ -25,11 +25,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![desktop-design](https://github.com/MaracaraCarlos/Four-card-feature-section/assets/113530553/0fc66c87-2477-42d3-bfef-60b07035e62c)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [GitHub](https://github.com/MaracaraCarlos/Four-card-feature-section)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
