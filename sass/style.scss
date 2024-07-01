@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$Red: #ea5353;
+$Cyan: #45d3d3;
+$Orange: #fcaf4a;
+$Blue: #549ef2;
+$Very-Dark-Blue: #4c4e61;
+$Grayish-Blue: rgb(163, 165, 174);
+$Very-Light-Gray: #fafafa;
+$min-weight: 200;
+$mid-weight: 400;
+$max-weight: 600;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: $Very-Light-Gray;
+}
+header {
+  text-align: center;
+  :first-child {
+    font-size: 2rem;
+    font-weight: $min-weight;
+    color: $Very-Dark-Blue;
+  }
+  :nth-child(2) {
+    font-size: 2rem;
+    font-weight: $max-weight;
+    color: $Very-Dark-Blue;
+  }
+  :nth-child(3) {
+    color: $Grayish-Blue;
+    font-weight: $mid-weight;
+  }
+}
+main {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.mid_col{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.card {
+  height: 250px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: -2px 5px 22px 0px rgba(163,165,174,1);
+  -webkit-box-shadow: -2px 5px 22px 0px rgba(163,165,174,1);
+  -moz-box-shadow: -2px 5px 22px 0px rgba(163,165,174,1);
+  h2 {
+    font-size: 1.4rem;
+    color: $Very-Dark-Blue;
+  }
+  p {
+    padding-top: 10px;
+    color: $Grayish-Blue;
+  }
+  img {
+    height: 64px;
+    width: 64px;
+    align-self: flex-end;
+  }
+}
+.card_cyan {
+  border-top: 5px solid $Cyan;
+  animation: fromLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.card_red {
+  border-top: 5px solid $Red;
+  animation: show;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.card_yellow {
+  border-top: 5px solid $Orange;
+  animation: show;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.card_blue {
+  border-top: 5px solid $Blue;
+  animation: fromRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+/* Animations */
+@keyframes fromLeft {
+  from {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fromRight {
+  from {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (width <= 450px) {
+  header {
+    margin-top: 40px;
+  }
+  main {
+    flex-direction: column;
+    margin-block: 30px;
+  }
+}
